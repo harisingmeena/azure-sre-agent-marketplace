@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "azure-appservice-sre",
+  "description": "Azure App Service incident response and safety-gated bad deployment rollback.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marketplace Maintainer"
+  },
+  "keywords": [
+    "azure",
+    "sre",
+    "app-service",
+    "incident-response",
+    "rollback"
+  ]
+}

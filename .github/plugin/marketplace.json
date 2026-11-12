@@ -1,0 +1,35 @@
+{
+  "name": "azure-sre-agent-marketplace",
+  "metadata": {
+    "description": "SRE workflows for Azure App Service",
+    "version": "1.0.0"
+  },
+  "owner": {
+    "name": "Marketplace Maintainer"
+  },
+  "plugins": [
+    {
+      "name": "azure-appservice-sre",
+      "description": "Investigate Azure App Service incidents and safely roll back bad deployments.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Marketplace Maintainer"
+      },
+      "homepage": "https://github.com/harisingmeena/azure-sre-agent-marketplace/tree/main/plugins/azure-appservice-sre",
+      "keywords": [
+        "azure",
+        "sre",
+        "app-service",
+        "deployment",
+        "rollback",
+        "incident-response"
+      ],
+      "repository": "https://github.com/harisingmeena/azure-sre-agent-marketplace",
+      "source": {
+        "source": "github",
+        "repo": "harisingmeena/azure-sre-agent-marketplace",
+        "path": "plugins/azure-appservice-sre"
+      }
+    }
+  ]
+}
