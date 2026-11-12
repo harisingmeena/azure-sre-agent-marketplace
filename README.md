@@ -1,6 +1,6 @@
 # Azure SRE Agent Marketplace
 
-A VS Code Copilot agent-plugin marketplace containing an Azure App Service SRE agent and a deployment rollback skill.
+A VS Code Copilot agent-plugin marketplace containing an Azure App Service and Front Door SRE agent, a deployment rollback skill, and a Front Door WAF IP block/allow skill.
 
 ## Contents
 
@@ -11,13 +11,13 @@ A VS Code Copilot agent-plugin marketplace containing an Azure App Service SRE a
 
 In VS Code, open **Chat: Install Plugin from Source** and select the `plugins/azure-appservice-sre` folder. Alternatively, add this repository as a marketplace in the Agent Customizations editor.
 
-Before publishing this marketplace repository, replace `OWNER/REPOSITORY` in `.github/plugin/marketplace.json` with its GitHub owner and repository name.
+The marketplace source is configured for this GitHub repository. The agent and skills provide operational guidance only and require explicit approval before any production-changing operation. For rollback, verify the target app, slot, release, and current health. For Front Door WAF changes, verify the associated endpoints and note that an `Allow` custom rule terminates WAF evaluation.
 
-The agent and skill provide operational guidance only. The rollback workflow requires explicit approval before any production-changing operation; review the target app, slot, release, and current health before approving.
+## Included workflows
 
-## Included workflow
+Use the **Azure App Service and Front Door SRE** agent for App Service incidents or Front Door WAF IP block/allow requests. The `app-service-bad-deployment-rollback` skill guides triage, selection of a verified rollback target, approval, rollback, and post-change validation. The `azure-front-door-waf-ip-block-allow` skill guides scoped client-IP rules, WAF policy impact review, explicit approval, and verification.
 
-Use the **Azure App Service SRE** agent to investigate a suspected bad deployment. The `app-service-bad-deployment-rollback` skill guides triage, selection of a verified rollback target, approval, rollback, and post-change validation.
+Both workflows provide operational guidance only and require explicit approval before a production-changing operation. A Front Door WAF `Allow` custom rule terminates WAF evaluation and can bypass later rules.
 
 ## Marketplace registration
 
