@@ -11,6 +11,22 @@ A VS Code Copilot agent-plugin marketplace containing an Azure App Service and F
 
 In VS Code, open **Chat: Install Plugin from Source** and select the `plugins/azure-appservice-sre` folder. Alternatively, add this repository as a marketplace in the Agent Customizations editor.
 
+## Install from this repository
+
+On Windows, clone this repository and run the installer from PowerShell:
+
+```powershell
+.\scripts\install-vscode-plugin.ps1
+```
+
+The script opens the VS Code install prompt for the `azure-appservice-sre` plugin from this repository. Review the publisher and plugin, then confirm the prompts in VS Code. The script does not install silently or bypass VS Code's trust and security prompts. Plugin support must be enabled in VS Code, and Copilot Agent Host must be available.
+
+You can also open this install link directly:
+
+```text
+vscode://chat-plugin/install?source=harisingmeena%2Fazure-sre-agent-marketplace&plugin=azure-appservice-sre
+```
+
 The marketplace source is configured for this GitHub repository. The agent and skills provide operational guidance only and require explicit approval before any production-changing operation. For rollback, verify the target app, slot, release, and current health. For Front Door WAF changes, verify the associated endpoints and note that an `Allow` custom rule terminates WAF evaluation.
 
 ## Included workflows
@@ -21,4 +37,4 @@ Both workflows provide operational guidance only and require explicit approval b
 
 ## Marketplace registration
 
-Once published to GitHub, add this repository as a plugin marketplace in VS Code's Agent Customizations editor. Review marketplace contents and publisher before installing.
+To browse the marketplace without installing directly, add this repository in VS Code's Agent Customizations editor. Review marketplace contents and publisher before installing.
